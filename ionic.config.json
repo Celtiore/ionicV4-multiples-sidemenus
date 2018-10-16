@@ -1,0 +1,7 @@
+{
+  "name": "side",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
