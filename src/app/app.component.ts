@@ -10,24 +10,15 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 })
 export class AppComponent {
   public appPages = [
-    {
-      title: 'Home',
-      url: '/home',
-      icon: 'home'
-    },
-    {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    }
+    { title: 'Home', url: '/home', icon: 'home' },
+    { title: 'List', url: '/list', icon: 'list' },
+    { title: 'Menu 1', url: '/menu1', icon: 'list' },
+    { title: 'Menu 2', url: '/menu2', icon: 'list' }
   ];
 
-  constructor(
-    private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar
-  ) {
+  constructor(private platform: Platform, private splashScreen: SplashScreen, private statusBar: StatusBar) {
     this.initializeApp();
+
   }
 
   initializeApp() {
@@ -36,4 +27,5 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+  
 }

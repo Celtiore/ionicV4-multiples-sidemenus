@@ -14,3 +14,24 @@
   <p>If you get lost, the
     <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
 </ion-content>
+<ion-router-outlet main></ion-router-outlet>
+
+<ion-menu side="start" menu-id="Menu3">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu 3</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle autoHide="true" *ngFor="let p of appPages">
+          <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+            <ion-icon slot="start" [name]="p.icon"></ion-icon>
+            <ion-label>
+              {{p.title}}
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>

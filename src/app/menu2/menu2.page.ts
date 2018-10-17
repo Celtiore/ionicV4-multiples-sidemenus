@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-menu2',
+  templateUrl: './menu2.page.html',
+  styleUrls: ['./menu2.page.scss'],
 })
-export class HomePage implements OnInit {
+export class Menu2Page implements OnInit {
   public appPages = [
     { title: 'Home', url: '/home', icon: 'home' },
     { title: 'List', url: '/list', icon: 'list' },
@@ -14,10 +14,8 @@ export class HomePage implements OnInit {
     { title: 'Menu 2', url: '/menu2', icon: 'list' },
 
   ];
-  constructor(public menuCtrl: MenuController) {
-  }
-  ngOnInit() {
-  }
-  ionViewWillEnter() { this.menuCtrl.enable(true, 'Menu3') }
+  constructor(public menuCtrl: MenuController) { }
 
+  ngOnInit() { }
+  ionViewWillEnter() { this.menuCtrl.enable(true, 'Menu2') }
 }

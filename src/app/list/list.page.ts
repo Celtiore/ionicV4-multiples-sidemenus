@@ -1,3 +1,4 @@
+import { MenuController } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -19,8 +20,15 @@ export class ListPage implements OnInit {
     'bluetooth',
     'build'
   ];
+  public appPages = [
+    { title: 'Home', url: '/home', icon: 'home' },
+    { title: 'List', url: '/list', icon: 'list' },
+    { title: 'Menu 1', url: '/menu1', icon: 'list' },
+    { title: 'Menu 2', url: '/menu2', icon: 'list' },
+
+  ];
   public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor() {
+  constructor(public menuCtrl: MenuController) {
     for (let i = 1; i < 11; i++) {
       this.items.push({
         title: 'Item ' + i,
@@ -30,10 +38,6 @@ export class ListPage implements OnInit {
     }
   }
 
-  ngOnInit() {
-  }
-  // add back when alpha.4 is out
-  // navigate(item) {
-  //   this.router.navigate(['/list', JSON.stringify(item)]);
-  // }
+  ngOnInit() {  }
+  ionViewWillEnter() { this.menuCtrl.enable(true, 'Menu4') }
 }
