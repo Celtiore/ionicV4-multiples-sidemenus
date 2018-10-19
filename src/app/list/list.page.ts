@@ -38,6 +38,15 @@ export class ListPage implements OnInit {
     }
   }
 
-  ngOnInit() {  }
-  ionViewWillEnter() { this.menuCtrl.enable(true, 'Menu4') }
+  ngOnInit() { }
+  ionViewWillEnter() {
+    this.menuCtrl.enable(true, 'Menu4');
+    console.log('List');
+    this.menuCtrl.getMenus().then(res => {
+      console.log(res);
+    })
+  }
+  ionViewDidLeave() {
+    this.menuCtrl.enable(false, 'Menu4')
+  }
 }

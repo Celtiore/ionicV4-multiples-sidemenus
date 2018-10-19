@@ -17,5 +17,14 @@ export class Menu1Page implements OnInit {
   constructor(public menuCtrl: MenuController) { }
 
   ngOnInit() { }
-  ionViewWillEnter() { this.menuCtrl.enable(true, 'Menu1') }
+  ionViewWillEnter() {
+    this.menuCtrl.enable(true, 'Menu1');
+    console.log('Menu 1');
+    this.menuCtrl.getMenus().then(res => {
+      console.log(res);
+    })
+  }
+  ionViewDidLeave() {
+    this.menuCtrl.enable(false, 'Menu1')
+  }
 }

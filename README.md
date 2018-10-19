@@ -1,5 +1,14 @@
 # Multiples SideMenu - Ionic V4
 
+#   Update 19.10.2018
+
+#   
+    -   move all ion-menu in app.component.ts
+    -   add in all pages :
+    -   ionViewDidLeave() {    this.menuCtrl.enable(false, 'MenuXXXXX')  }
+
+    -   Seems to works perfectly
+
 #   Ionic:
     -   ionic (Ionic CLI)             : 4.2.1 (/usr/local/lib/node_modules/ionic)
     -   Ionic Framework               : @ionic/angular 4.0.0-beta.13

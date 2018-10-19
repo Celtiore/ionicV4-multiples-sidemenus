@@ -18,6 +18,16 @@ export class HomePage implements OnInit {
   }
   ngOnInit() {
   }
-  ionViewWillEnter() { this.menuCtrl.enable(true, 'Menu3') }
+  ionViewWillEnter() {
+    this.menuCtrl.enable(true, 'Menu3')
+    console.log('Home');
+    this.menuCtrl.getMenus().then(res => {
+      console.log(res);
+    })
+  }
+  ionViewDidLeave() {
+    this.menuCtrl.enable(false, 'Menu3')
+  }
+
 
 }
