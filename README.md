@@ -3,9 +3,8 @@
 #   Update 19.10.2018
 
 #   
-    -   move all ion-menu in app.component.ts
-    -   add in all pages :
-    -   ionViewDidLeave() {    this.menuCtrl.enable(false, 'MenuXXXXX')  }
+    -   move all ion-menu in app.component.html
+    -   add in all pages : ionViewDidLeave() {    this.menuCtrl.enable(false, 'MenuXXXXX')  }
 
     -   Seems to works perfectly
 
